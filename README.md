@@ -1,4 +1,4 @@
-###  Hi there , I'm Mirzzie 👋
+###  Hi there , I'm Mirzad Ismail (aka Mirzzie) 👋
 
 
 
