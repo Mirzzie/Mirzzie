@@ -7,10 +7,8 @@
 
 - 🔭 I’m currently doing BCA.
 - 🌱 I’m currently learning C/C++,Python,Git.
-- 👯 I’m looking to collaborate on nothing yet :/
-- 🤔 I’m looking for help with none yet :/
-- 💬 Ask me about Nothing xD.
-- 📫 How to reach me: You Can't! 
+- 👯 I’m looking to collaborate on any Open Source Development Program
+- 🤔 I’m looking for help with something
 - 😆 Fun fact: "Loops" --> its a trap! 
 
 
