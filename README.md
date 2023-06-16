@@ -5,6 +5,14 @@
 I’m a BCA graduate and a techie exploring technologies,currently learning DevOps, cloud, IoT / embedded and web development,
 looking to collaborate on open source and communities, looking for help with Web3.0 ,robotics and many more..
 
+###  Connect with me :)
+
+[![Linkedin Badge](https://img.shields.io/badge/-LinkedIn-0e76a8?style=flat-square&logo=Linkedin&logoColor=white)](https://www.linkedin.com/in/mirzad-ismail-7870441ba/)
+[![Twitter Badge](https://img.shields.io/badge/-Twitter-00acee?style=flat-square&logo=Twitter&logoColor=white)](https://twitter.com/Mirzzie)
+[![Instagram Badge](https://img.shields.io/badge/-Instagram-e4405f?style=flat-square&logo=Instagram&logoColor=white)](https://www.instagram.com/mirzziy/)
+
+### I'm into :
+
 <p align="left">
 	<p align="left">
 	<a href="https://skillicons.dev">
