@@ -2,14 +2,9 @@
 
 
 
+I’m a BCA graduate and techie exploring technologies,currently learning DevOps, Cloud, IoT / Embedded and Web development,
+looking to collaborate on Open Source Development Programs and communities, looking for help with Web3 ,Robotics etc,
 
-- 🔭 I’m a BCA graduate and techie exploring technologies,
-- 🌱 currently learning DevOps, Cloud, IoT / Embedded and Web development,
-- 👯 looking to collaborate on Open Source Development Programs and communities,
-- 🤔 looking for help with Web3 ,Robotics etc,
-- 😆 Fun fact: I'm not funny.
-
-<h3 align="left">Languages and Tools:</h3>
 <p align="left">
 	<p align="left">
 	<a href="https://skillicons.dev">
