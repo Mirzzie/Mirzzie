@@ -2,8 +2,8 @@
 
 
 
-I’m a BCA graduate and techie exploring technologies,currently learning DevOps, Cloud, IoT / Embedded and Web development,
-looking to collaborate on Open Source Development Programs and communities, looking for help with Web3 ,Robotics etc,
+I’m a BCA graduate and a techie exploring technologies,currently learning DevOps, Cloud, IoT / Embedded and Web development,
+looking to collaborate on Open Source Development Programs and communities, looking for help with Web3 ,Robotics and many more..
 
 <p align="left">
 	<p align="left">
