@@ -2,13 +2,13 @@
 
 
 
-I’m a BCA graduate and a techie exploring technologies,currently learning DevOps, Cloud, IoT / Embedded and Web development,
-looking to collaborate on Open Source Development Programs and communities, looking for help with Web3 ,Robotics and many more..
+I’m a BCA graduate and a techie exploring technologies,currently learning DevOps, cloud, IoT / embedded and web development,
+looking to collaborate on open source and communities, looking for help with Web3.0 ,robotics and many more..
 
 <p align="left">
 	<p align="left">
 	<a href="https://skillicons.dev">
-    	<img src="https://skillicons.dev/icons?i=androidstudio,azure,bootstrap,c,cpp,css,html,java,js,php,kotlin,aws,docker,kubernetes,python,linux,vscode,django,mysql,arduino&perline=10" />
+    	<img src="https://skillicons.dev/icons?i=androidstudio,azure,c,cpp,python,bootstrap,css,html,java,kotlin,js,php,aws,docker,kubernetes,linux,vscode,django,mysql,arduino&perline=10" />
   	</a> 
 </p>
 
