@@ -17,7 +17,7 @@ looking to collaborate on open source and communities,looking for help with web3
 <p align="left">
 	<p align="left">
 	<a href="https://skillicons.dev">
-    	<img src="https://skillicons.dev/icons?i=androidstudio,azure,c,cpp,python,bootstrap,css,html,java,kotlin,js,php,aws,docker,kubernetes,linux,vscode,django,mysql,arduino&perline=10" />
+    	<img src="https://skillicons.dev/icons?i=c,cpp,python,bootstrap,css,html,androidstudio,java,kotlin,js,php,azure,aws,docker,kubernetes,linux,vscode,django,mysql,arduino&perline=10" />
   	</a> 
 </p>
 
