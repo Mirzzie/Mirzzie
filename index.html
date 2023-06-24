@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mirzzie.</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/ME.jpeg " alt="Mirzad Ismail" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Mirzad Ismail">Mirzad Ismail</h1>
+
+          <p class="title">BCA Graduate</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:mirzad.ismail.official@gmail.com" class="contact-link">mirzad.ismail.official@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+12133522795" class="contact-link">+91 6282795103</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">March 16, 2001</time>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Thrissur, Kerala, India</address>
+            </div>
+
+          </li>
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://t.me/MiRZZiE" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+              </svg>
+
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://twitter.com/Mirzzie" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://www.instagram.com/mirzziy/" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/mirzad-ismail-7870441ba/" class="social-link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/>
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </aside>
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>achievements</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      <article class="about  active" data-page="about">
+
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            I'm a techie exploring technologies,currently learning DevOps,cloud-AWS ,IoT/Embedded and web development, looking to collaborate on open source and communities,looking for help with web3.0, robotics and many more..
+          </p>
+        </section>
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+
+          <h3 class="h3 service-title">What i'm doing</h3>
+
+          <ul class="service-list">
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/devops.svg
+                " alt="design icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">DevOps</h4>
+
+                <p class="service-item-text">
+                  I'm learning DevOps and cloud computing.
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/web.svg" alt="Web development icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web development</h4>
+
+                <p class="service-item-text">
+                  I'm learning web development and web design.
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/app.svg" alt="mobile app icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile apps</h4>
+
+                <p class="service-item-text">
+                  I'm learning mobile app development and looking forward to learn flutter or react native.
+                </p>
+              </div>
+
+            </li>
+
+            <li class="service-item">
+
+              <div class="service-icon-box">
+                <img src="./assets/images/circuit.svg" alt="camera icon" width="40">
+              </div>
+
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">IoT and Electronics</h4>
+
+                <p class="service-item-text">
+                  I'm learning to DIY IoT and Electronics and also interested in robotics.
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+
+        <!--
+          - testimonials modal
+        -->
+
+        <div class="modal-container" data-modal-container>
+
+          <div class="overlay" data-overlay></div>
+
+          <section class="testimonials-modal">
+
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+
+          </section>
+
+        </div>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Bachelor Of Computer Application (BCA)</h4>
+              <span>Mahatma Gandhi University(MGU)</span>
+              <p class="timeline-text">
+                CGPA: 7.8
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">CLASS XII - COMPUTER SCIENCE</h4>
+              <span>Vocational Higher Secondary School, Karalam</span>
+              <p class="timeline-text">
+                Score: 78.85%
+              </p>
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">F13 Technologies - AWS Cloud Intern</h4>
+              <span>Consultancy</span>
+              <span>05/2023 — Present</span>
+
+              <p class="timeline-text">
+                I am currently working as an AWS Cloud Intern at F13 Technologies, New Delhi (WFH). Also an AWS Partner and learning their cloud
+                services like EC2, S3, RDS, IAM, and many more etc.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Future Ready Talent - Microsoft Azure Intern</h4>
+              <span>12/2021 — 07/2022</span>
+              <p class="timeline-text">
+                Learnt about Microsoft Azure Fundamentals.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Verzeo - Robotics Intern</h4>
+              <span>05/2021 — 07/2021</span>
+              <p class="timeline-text">
+                Learnt about Robotics using Arduino.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+              <p class="pill">Git</p>
+              <p class="pill">C++</p>
+              <p class="pill">Java</p>
+              <p class="pill">Docker</p>
+              <p class="pill">Kubernetes</p>
+              <p class="pill">Python</p>
+              <p class="pill">Php</p>
+              <p class="pill">Html</p>
+              <p class="pill">CSS</p>
+              <p class="pill">JavaScript</p>
+              <p class="pill">Linux</p>
+              <p class="pill">MySql</p>
+              <p class="pill">Bootstrap</p>
+              <p class="pill">Kotlin</p>
+              <p class="pill">C</p>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/Mirzzie/Invigilation-Duty-Scheduler">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline" ></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/landing.png" alt="Invigilation Duty Scheduler" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Invigilation Duty Scheduler</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="https://github.com/ShivamKumar2002/tour-routing-system">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/TourRoute.png" alt="Tour Route Optimizer" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Tour Route Optimizer</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="https://github.com/Mirzzie/IoT_based_Smart_Irrigation_System">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/andro.png" alt="IoT Based Smart Irrigation App" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">IoT Based Smart Irrigation App</h3>
+
+                <p class="project-category">Applications</p>
+
+              </a>
+            </li>
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #achievements
+      -->
+
+      <article class="achievements" data-page="achievements">
+
+        <header>
+          <h2 class="h2 article-title">Achievements</h2>
+        </header>
+
+        <section class="achievements-posts">
+
+          <ul class="achievements-posts-list">
+
+            <li class="achievements-post-item">
+              <a href="#">
+
+                <figure class="achievements-banner-box">
+                  <img src="./assets/images/ver.jpg" alt="Robotics Internship Completion" loading="lazy">
+                </figure>
+
+                <div class="achievements-content">
+
+                  <div class="achievements-meta">
+                    <p class="achievements-category">Internship</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2021-07-26">July 26, 2021</time>
+                  </div>
+
+                  <h3 class="h3 achievements-item-title">Robotics Course</h3>
+
+                  <p class="achievements-text">
+                   Completion of Robotics Course at Verzeo
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="achievements-post-item">
+              <a href="#">
+
+                <figure class="achievements-banner-box">
+                  <img src="./assets/images/FRT.jpg" alt="Microsoft Azure Internship" loading="lazy">
+                </figure>
+
+                <div class="achievements-content">
+
+                  <div class="achievements-meta">
+                    <p class="achievements-category">Internship</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-03-27">March 27, 2022</time>
+                  </div>
+
+                  <h3 class="h3 achievements-item-title">Microsoft Azure</h3>
+
+                  <p class="achievements-text">
+                    Completion of Microsoft Azure Fundamentals Internship at Future Ready Talent
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="achievements-post-item">
+              <a href="#">
+
+                <figure class="achievements-banner-box">
+                  <img src="./assets/images/cpp.jpg" alt="C++ Training Completion" loading="lazy">
+                </figure>
+
+                <div class="achievements-content">
+
+                  <div class="achievements-meta">
+                    <p class="achievements-category">Training</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-4">Feb 4, 2022</time>
+                  </div>
+
+                  <h3 class="h3 achievements-item-title">C++ Programming</h3>
+
+                  <p class="achievements-text">
+                    Completion of C++ Training IIT Bombay
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="achievements-post-item">
+              <a href="#">
+
+                <figure class="achievements-banner-box">
+                  <img src="./assets/images/insp.jpg" alt="Inspiria'22" loading="lazy">
+                </figure>
+
+                <div class="achievements-content">
+
+                  <div class="achievements-meta">
+                    <p class="achievements-category">Tech Event</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-05-15">May 15, 2022</time>
+                  </div>
+
+                  <h3 class="h3 achievements-item-title">Certificate of Appreciation</h3>
+
+                  <p class="achievements-text">
+                    Certificate of Appreciation for being a part of Inspiria'22 event of IEDC
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="achievements-post-item">
+              <a href="#">
+
+                <figure class="achievements-banner-box">
+                  <img src="./assets/images/certi.jfif" alt="Robotics Internship Certification" loading="lazy">
+                </figure>
+
+                <div class="achievements-content">
+
+                  <div class="achievements-meta">
+                    <p class="achievements-category">Internship</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2021-08-3">Sep 3, 2021</time>
+                  </div>
+
+                  <h3 class="h3 achievements-item-title">Certificate of Internship</h3>
+
+                  <p class="achievements-text">
+                    Certificate of Internship for Robotics at Verzeo by MVARO
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+            <li class="achievements-post-item">
+              <a href="#">
+
+                <figure class="achievements-banner-box">
+                  <!-- <img src="./assets/images/achievements-6.jpg" alt="Design digest #79" loading="lazy"> -->
+                </figure>
+
+                <div class="achievements-content">
+
+                  <div class="achievements-meta">
+                    <p class="achievements-category">Internship</p>
+
+                    <span class="dot"></span>
+
+                    <time datetime="2022-02-23">NEXT</time>
+                  </div>
+
+                  <h3 class="h3 achievements-item-title">SOON</h3>
+
+                  <p class="achievements-text">
+                  </p>
+
+                </div>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+        <!-- <section class="mapbox" data-mapbox>
+          <figure>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d199666.5651251294!2d-121.58334177520186!3d38.56165006739519!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x809ac672b28397f9%3A0x921f6aaa74197fdb!2sSacramento%2C%20CA%2C%20USA!5e0!3m2!1sen!2sbd!4v1647608789441!5m2!1sen!2sbd"
+              width="400" height="300" loading="lazy"></iframe>
+          </figure>
+        </section> -->
+
+        <section class="contact-form">
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
