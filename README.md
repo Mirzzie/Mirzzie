@@ -2,7 +2,8 @@
 
 
 
-I’m exploring technologies: learning DevOps, Cloud computing, IoT/Embedded and Web development, looking to collaborate on open source and communities, delving into Cybersecurity and AI.
+I’m exploring technologies: learning DevOps, Cloud computing, IoT/Embedded and Web development, 
+looking to collaborate on open source and communities, delving into Cybersecurity and AI.
 
 ###  Connect with me ❤️
 
