@@ -24,3 +24,4 @@ looking to collaborate on open source and communities, delving into IoT/Embedded
 <p align="left">
 	<img src = "https://github-readme-stats.vercel.app/api?username=Mirzzie&&show_icons=true&title_color=ffffff&icon_color=bb2acf&text_color=daf7dc&bg_color=151515" >
 </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=mirzzie&label=Profile%20views&color=0e75b6&style=flat" alt="mirzzie" /> </p>
