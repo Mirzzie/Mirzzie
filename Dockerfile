@@ -1,2 +1,5 @@
-FROM httpd:2.4
-ADD . /var/www/html
+FROM nginx:latest
+
+COPY . /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
