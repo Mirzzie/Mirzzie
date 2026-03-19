@@ -413,6 +413,16 @@ img {
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
+  max-width: calc(100% - 32px);
+  width: max-content;
+  text-align: center;
+  z-index: 2;
+}
+
+.hero-scroll span {
+  display: block;
+  max-width: 100%;
+  white-space: normal;
 }
 
 .hero-scroll-line {
@@ -1090,20 +1100,27 @@ img {
 .skill-item-header {
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
   margin-bottom: 6px;
 }
 
 .skill-item-name {
+  flex: 1;
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
 }
 
 .skill-item-level {
+  flex-shrink: 0;
+  align-self: flex-start;
+  white-space: nowrap;
+  line-height: 1.2;
   font-size: 0.75rem;
   font-family: var(--font-mono);
   color: var(--accent);
-  padding: 1px 8px;
+  padding: 4px 10px;
   background: rgba(var(--accent-rgb), 0.08);
   border-radius: 50px;
 }
@@ -1456,12 +1473,20 @@ img {
   flex-shrink: 0;
 }
 
-.contact-item a {
+.contact-item a:not(.btn) {
   color: var(--text-secondary);
 }
 
-.contact-item a:hover {
+.contact-item a:not(.btn):hover {
   color: var(--accent);
+}
+
+.contact-item .btn-primary {
+  color: var(--bg-primary);
+}
+
+.contact-item .btn-primary:hover {
+  color: var(--bg-primary);
 }
 
 .contact-social {
@@ -1672,6 +1697,11 @@ img {
 
   .certs-grid {
     grid-template-columns: 1fr;
+  }
+
+  .hero-scroll {
+    letter-spacing: 1px;
+    font-size: 0.68rem;
   }
 }
 

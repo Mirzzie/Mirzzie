@@ -10,17 +10,18 @@ const portfolioData = {
   // ── PERSONAL INFO ──────────────────────────────────────────
   personal: {
     name: "Mirzad Ismail",
-    title: "IT Operations Engineer & Cloud Security Consultant",
-    tagline: "I help teams keep their systems running and their infrastructure secure. I also help people who are figuring out cloud, DevOps, or security — because someone helped me once, and it made all the difference.",
-    email: "your.email@example.com",
+    title: "Junior IT Operations & Cloud Operations Engineer",
+    tagline: "I help teams keep systems reliable, secure, and well-documented. I am currently focused on junior IT Operations and Cloud Operations roles where I can contribute from day one and keep leveling up fast.",
+    email: "mirzad.official@outlook.com",
     location: "Dublin, Ireland",
-    availability: "Open to roles & consulting — let's talk",
+    availability: "Open to Junior IT Operations / Cloud Operations roles",
+    hiringFocus: "Target roles: Junior IT Operations, Cloud Operations, DevOps Support",
     resumeLink: "#", // Link to your resume PDF — keep it for HR/ATS, your portfolio does the real talking
-    calendlyLink: "https://calendly.com/yourusername", // Your Calendly booking link
+    calendlyLink: "https://calendly.com/mirzad-ismail", // Your Calendly booking link
     avatarUrl: "", // URL to your profile photo — personal branding tip: use a real photo, it builds trust
     bio: [
-      "I'll be honest — I didn't start as a prodigy. I started by breaking things, Googling errors at midnight, and slowly getting better at putting them back together. I studied CS in India, interned on real cloud projects, then landed a production DevOps role where actual clients were watching and real money was on the line.",
-      "Now I'm finishing an MSc in Cyber Security in Dublin, building on everything I've learned. Along the way, I started helping others — friends, colleagues, people who reached out — with cloud, DevOps, security questions, and IT problems they couldn't crack. That turned into proper consultation work. I like solving hard problems, and I like helping people solve theirs even more."
+      "I'll be honest, I started by breaking things, Googling errors at midnight, and slowly getting better at putting them back together. I studied CS in India, interned on real cloud projects, then landed a production DevOps role where actual clients were watching and real money was on the line.",
+      "Now I have completed my MSc in Cyber Security in Dublin, building on everything I've learned. Along the way, I started helping friends, colleagues, people who reached out with cloud, DevOps, security questions, and IT problems they couldn't crack. That turned into proper consultation work. I like solving hard problems, and I like helping people solve theirs even more."
     ]
   },
 
@@ -28,12 +29,12 @@ const portfolioData = {
   consultation: {
     enabled: true,
     headline: "Need a hand with something?",
-    subheadline: "I do consultation and mentoring for people and teams working through cloud, DevOps, security, or general IT challenges. No jargon, no upselling — just practical help from someone who's been in the trenches.",
+    subheadline: "I work as a consultant and mentor with individuals and teams that deal with the older cloud, DevOps, security, or overall IT issues.",
     services: [
       {
         title: "Cloud & Infrastructure",
         icon: "☁️",
-        description: "Thinking about moving to AWS or Azure? Not sure if your setup is right? I'll help you figure out what actually makes sense for your situation — and what's just hype.",
+        description: "Thinking about moving to AWS or Azure? Not sure if your setup is right? I'll help you figure out what actually makes sense for your situation.",
         examples: ["Cloud architecture review", "AWS/Azure migration planning", "Cost optimisation strategy", "Infrastructure best practices"]
       },
       {
@@ -49,16 +50,16 @@ const portfolioData = {
         examples: ["Security posture review", "Vulnerability assessment guidance", "Secure coding practices", "Incident response planning"]
       },
       {
-        title: "Career Mentoring",
+        title: "Beginner Mentoring",
         icon: "🧭",
-        description: "Trying to break into cloud, DevOps, or security? I've done it. I'll share what actually worked, what didn't, and help you figure out your next step.",
-        examples: ["Career path guidance", "Portfolio & CV review", "Interview preparation", "Certification roadmap"]
+        description: "If you're just getting started in cloud, DevOps, or security and feel overwhelmed, I can mentor you step by step. Real guidance, beginner-friendly explanations, and no judgment.",
+        examples: ["Beginner Q&A sessions", "Hands-on fundamentals mentoring", "Tooling walkthroughs", "Practical learning support"]
       }
     ],
     cta: {
       text: "Book a free 15-minute call",
       subtext: "No commitment. Just tell me what you're working on and I'll tell you if I can help.",
-      link: "https://calendly.com/yourusername" // Your Calendly link
+      link: "https://calendly.com/mirzad-ismail" // Your Calendly link
     }
   },
 
@@ -77,14 +78,14 @@ const portfolioData = {
   // Psychology: Specificity — concrete verbs, not buzzwords
   valueProposition: {
     headline: "Here's what I actually bring to the table",
-    subheadline: "Whether you're hiring me or booking a consultation — this is what I'm good at, honestly.",
+    subheadline: "If you're hiring for junior IT Operations, Cloud Operations, or DevOps support, this is exactly where I can add value.",
     cards: [
       {
         role: "IT Support",
         icon: "🖥️",
-        promise: "When someone's laptop won't connect or a server's acting up, I'm the person who figures it out — calmly, clearly, and fast.",
+        promise: "When someone's laptop won't connect or a server's acting up, I'm the person who figures it out calmly, clearly, and fast.",
         proof: [
-          "Handled Level 2 support directly with clients at Crozaint — real people, real pressure",
+          "Handled Level 2 support directly with clients at Crozaint",
           "Ran scheduled backups, monitored resources, and wrote reports clients could actually understand",
           "Learned to prioritise on the fly when three things break at once"
         ],
@@ -104,9 +105,9 @@ const portfolioData = {
       {
         role: "Cloud Admin",
         icon: "☁️",
-        promise: "I work with AWS and Azure — deploying things, keeping them secure, and making sure the bill doesn't quietly spiral.",
+        promise: "I work with AWS and Azure deploying things, keeping them secure, and making sure the bill doesn't quietly spiral.",
         proof: [
-          "Managed real AWS and Azure environments for paying clients — not just lab exercises",
+          "Managed real AWS and Azure environments for paying clients",
           "Wrote scripts that actually saved 10% on cloud costs",
           "Currently studying cyber security, so I think about hardening from day one"
         ],
@@ -119,7 +120,7 @@ const portfolioData = {
         proof: [
           "Built and fixed CI/CD pipelines in AWS and Azure for client projects",
           "Automated backups, monitoring, and reporting workflows",
-          "Troubleshot deployment issues in production — not staging, production"
+          "Troubleshot deployment issues in production"
         ],
         edge: "I came up through IT support before touching DevOps. I know exactly what it feels like when a deployment breaks something for real users."
       }
@@ -132,15 +133,15 @@ const portfolioData = {
     {
       phase: "Going deeper",
       icon: "🔒",
-      period: "Jan 2025 - Present",
+      period: "Jan 2025 - Jan 2026",
       role: "MSc Cyber Security",
       company: "National College of Ireland",
-      description: "I moved to Dublin to do this. I wanted to understand the security side — not just keep systems running, but know how to protect them. Pen testing, cryptography, forensics, incident response. It's hard, and it's making me a much better engineer.",
+      description: "I moved to Dublin to complete this master's and go deeper into security. The program gave me structured, hands-on depth in pen testing, cryptography, forensics, and incident response and made me a stronger engineer overall.",
       achievements: [
-        "Learning to think like an attacker — pen testing, network security, vulnerability analysis",
+        "Learning to think like an attacker: pentesting, network security, vulnerability analysis",
         "Studying cryptography and secure coding so I can build things right, not just fast",
-        "Malware analysis, digital forensics, and incident response — the stuff that matters when things go really wrong",
-        "IT law and research methods — because security isn't just technical"
+        "Malware analysis, digital forensics, and incident response: the stuff that matters when things go really wrong",
+        "IT law and research methods: because security isn't just technical"
       ],
       technologies: ["Penetration Testing", "Cryptography", "SIEM", "Forensics", "Malware Analysis", "Secure Coding"]
     },
@@ -152,7 +153,7 @@ const portfolioData = {
       company: "Crozaint Technologies Pvt Ltd",
       description: "This is where I grew up professionally. Real clients, real deadlines, real consequences. I automated deployments, managed cloud environments, and learned what it means when your script runs in production and actual people are waiting.",
       achievements: [
-        "Wrote automation scripts that cut cloud costs by 10% — my manager actually noticed",
+        "Wrote automation scripts that cut cloud costs by 10%",
         "Handled Level 2 support directly with clients when things needed fixing fast",
         "Set up and monitored cloud environments tailored to what each client actually needed",
         "Built automated backup and reporting workflows so nothing fell through the cracks",
@@ -166,10 +167,10 @@ const portfolioData = {
       period: "May 2023 - Aug 2023",
       role: "AWS Cloud Intern",
       company: "F13 Technologies",
-      description: "My first time working with real cloud infrastructure, not just textbooks. I deployed an actual app on AWS and realised cloud isn't about fancy tools — it's about solving problems for real businesses.",
+      description: "My first time working with real cloud infrastructure, not just textbooks. I deployed an actual app on AWS and realised cloud isn't about fancy tools: it's about solving problems for real businesses.",
       achievements: [
         "Built and deployed a web app on AWS with proper CI/CD from scratch",
-        "Studied how companies actually use cloud — not theory, real case studies",
+        "Studied how companies actually use cloud: real case studies",
         "Completed AWS Skill Builder training and got certified"
       ],
       technologies: ["AWS", "EC2", "S3", "CloudFormation", "CI/CD", "AWS Skill Builder"]
@@ -180,10 +181,10 @@ const portfolioData = {
       period: "Apr 2020 - Mar 2023",
       role: "Bachelor of Computer Applications",
       company: "Mahatma Gandhi University (MGU)",
-      description: "This is where I learned to think like an engineer. Three years of CS fundamentals — programming, databases, networking, how operating systems actually work. It wasn't glamorous, but it gave me the foundation everything else is built on.",
+      description: "This is where I learned to think like an engineer. Three years of CS fundamentals: programming, databases, networking, how operating systems actually work. It wasn't glamorous, but it gave me the foundation everything else is built on.",
       achievements: [
         "Got solid with Python, Java, SQL, and the basics of web development",
-        "Learned networking and OS internals — the stuff that actually matters when things break",
+        "Learned networking and OS internals: the stuff that actually matters when things break",
         "Came out knowing how to learn, not just what to memorise"
       ],
       technologies: ["Python", "Java", "SQL", "Networking", "Operating Systems", "Web Development"]
@@ -256,11 +257,11 @@ const portfolioData = {
   // Add your actual certifications here
   certifications: [
     {
-      name: "AWS Skill Builder Certifications",
+      name: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      date: "2023",
+      date: "Issued Oct 2025 • Expires Oct 2028",
       icon: "aws",
-      verifyLink: "#",
+      verifyLink: "https://www.credly.com/badges/a6fa5089-50d9-4fdf-b1cc-b6fe1bde6623/linked_in_profile",
     },
     // Add more certs as you earn them:
     // {
@@ -275,9 +276,9 @@ const portfolioData = {
   // ── EDUCATION ──────────────────────────────────────────────
   education: [
     {
-      degree: "MSc Cyber Security",
+      degree: "MSc Cyber Security (Completed)",
       institution: "National College of Ireland",
-      period: "Jan 2025 - Present",
+      period: "Jan 2025 - Jan 2026",
       location: "Dublin, Ireland",
       icon: "🎓",
       modules: [
@@ -310,7 +311,7 @@ const portfolioData = {
   projects: [
     {
       title: "Cloud Cost Optimisation Scripts",
-      description: "At Crozaint, I noticed we were overspending on cloud resources. So I wrote Python and Bash scripts to track usage and flag waste. Ended up saving 10% — which was a real number, not a slide deck stat.",
+      description: "At Crozaint, I noticed we were overspending on cloud resources. So I wrote Python and Bash scripts to track usage and flag waste. Ended up saving 10%.",
       tags: ["Python", "Bash", "AWS", "Azure", "Automation"],
       githubLink: "",
       liveLink: "",
@@ -318,12 +319,13 @@ const portfolioData = {
       highlights: [
         "10% actual cost reduction",
         "Automated resource tracking",
-        "Fed into client-facing reports"
+        "Fed into client-facing reports",
+        "Client code was internal/private; walkthrough available on request"
       ]
     },
     {
       title: "Deployment Pipeline Automation",
-      description: "The deployment process at Crozaint had too many manual steps. I cleaned up the CI/CD pipelines across AWS and Azure so deployments were faster and less nerve-wracking for everyone.",
+      description: "The deployment process at Crozaint had too many manual steps. I cleaned up the CI/CD pipelines across AWS and Azure so deployments were faster and less overhead for everyone.",
       tags: ["CI/CD", "AWS", "Azure", "DevOps", "Bash"],
       githubLink: "",
       liveLink: "",
@@ -331,12 +333,13 @@ const portfolioData = {
       highlights: [
         "Cut out manual deployment steps",
         "Worked across AWS and Azure",
-        "Tied into backup workflows"
+        "Tied into backup workflows",
+        "Built for live client environments, not classroom demos"
       ]
     },
     {
       title: "Backup & Monitoring Automation",
-      description: "Nobody wants to manually run backups every morning. I automated the whole thing — scheduled backups, resource monitoring, and reports that went straight to clients in a format they could read.",
+      description: "Nobody wants to manually run backups every morning. I automated the whole thing: scheduled backups, resource monitoring, and reports that went straight to clients in a format they could read.",
       tags: ["Bash", "Python", "Monitoring", "Backup", "Reporting"],
       githubLink: "",
       liveLink: "",
@@ -344,12 +347,13 @@ const portfolioData = {
       highlights: [
         "Fully automated backup scheduling",
         "Resource health monitoring",
-        "Client reports in Excel & Word"
+        "Client reports in Excel & Word",
+        "Reduced repetitive manual ops workload"
       ]
     },
     {
       title: "AWS Web App Deployment",
-      description: "During my internship at F13, I built and deployed a web app on AWS from scratch — EC2, S3, CloudFormation, proper CI/CD. It was my first time doing it end-to-end, and it clicked.",
+      description: "During my internship at F13, I built and deployed a web app on AWS from scratch: EC2, S3, CloudFormation, proper CI/CD. It was my first time doing it end-to-end, and it clicked.",
       tags: ["AWS", "EC2", "S3", "CI/CD", "CloudFormation"],
       githubLink: "",
       liveLink: "",
@@ -357,7 +361,8 @@ const portfolioData = {
       highlights: [
         "End-to-end deployment pipeline",
         "Built on AWS with CloudFormation",
-        "My first real cloud project"
+        "My first real cloud project",
+        "Hands-on foundation for later production DevOps work"
       ]
     }
   ],
@@ -391,7 +396,7 @@ const portfolioData = {
     { value: "MSc", label: "Cyber Security" },
     { value: "10%", label: "Cloud Costs Cut" },
     { value: "6mo", label: "Production DevOps" },
-    { value: "1:1", label: "Consulting & Mentoring" }
+    { value: "L2", label: "Client IT Support" }
   ],
 
   // ── THEME SETTINGS ─────────────────────────────────────────

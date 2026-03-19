@@ -2,7 +2,7 @@
 // PORTFOLIO APP - Renders the portfolio from data.js
 // ============================================================
 
-(function() {
+(function () {
   'use strict';
 
   const d = portfolioData;
@@ -17,6 +17,7 @@
     external: '<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>',
     mail: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
     location: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>',
+    briefcase: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 7V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v2"/></svg>',
     blog: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>',
     cert: {
       aws: '⚡',
@@ -71,8 +72,17 @@
     const resumeBtn = document.getElementById('heroResume');
     if (d.personal.resumeLink && d.personal.resumeLink !== '#') {
       resumeBtn.href = d.personal.resumeLink;
+      resumeBtn.setAttribute('target', '_blank');
+      resumeBtn.setAttribute('rel', 'noopener noreferrer');
+      resumeBtn.removeAttribute('download');
     } else {
-      resumeBtn.style.display = 'none';
+      if (d.personal.email) {
+        resumeBtn.href = `mailto:${encodeURIComponent(d.personal.email)}?subject=Resume%20request`;
+        resumeBtn.removeAttribute('download');
+        resumeBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Request my resume';
+      } else {
+        resumeBtn.style.display = 'none';
+      }
     }
 
     // Stats
@@ -414,6 +424,12 @@
     if (d.personal.location) {
       infoContainer.appendChild(
         el('div', { className: 'contact-item', innerHTML: `${icons.location} ${d.personal.location}` })
+      );
+    }
+
+    if (d.personal.hiringFocus) {
+      infoContainer.appendChild(
+        el('div', { className: 'contact-item', innerHTML: `${icons.briefcase} ${d.personal.hiringFocus}` })
       );
     }
 
