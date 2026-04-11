@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
   
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
@@ -23,9 +23,25 @@
   <!-- Favicon (terminal prompt style) -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
 </head>
-<body>
+<body class="gate-active">
   <!-- Skip to content (accessibility) -->
   <a href="#about" class="skip-to-content">Skip to main content</a>
+
+  <!-- Audience Gate -->
+  <div class="audience-gate" id="audienceGate" role="dialog" aria-modal="true" aria-labelledby="gateTitle">
+    <div class="audience-gate-card">
+      <div class="audience-gate-conversation" aria-live="polite">
+        <p class="audience-chat-line audience-chat-welcome" id="gateWelcome">Welcome, nice to meet you.</p>
+        <h2 class="audience-chat-line audience-chat-question" id="gateTitle">Can I ask who you are?</h2>
+        <p class="audience-chat-line audience-chat-subquestion" id="gateSubtitle">Pick the option that feels closest to you.</p>
+      </div>
+      <div class="audience-gate-choices" id="gateChoices"></div>
+      <div class="audience-gate-actions">
+        <button class="btn btn-ghost" id="gateBack" type="button" style="display:none;">Back</button>
+        <button class="btn btn-outline" id="gateSkip" type="button">Skip and explore</button>
+      </div>
+    </div>
+  </div>
 
   <!-- ═══ NAVIGATION ═══ -->
   <nav class="nav" id="nav">
@@ -43,7 +59,7 @@
         <li><a href="#journey">Journey</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact" class="nav-cta">Say Hello</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
       </ul>
     </div>
   </nav>
@@ -62,6 +78,7 @@
       </div>
       <p class="hero-tagline" id="heroTagline"></p>
       <div class="hero-stats" id="heroStats"></div>
+      <div class="quick-summary" id="quickSummary" style="display:none;"></div>
       <div class="hero-actions">
         <a href="#consultation" class="btn btn-primary">Work with me</a>
         <a href="#value" class="btn btn-outline">See what I do</a>
@@ -73,7 +90,7 @@
       <div class="hero-social" id="heroSocial"></div>
     </div>
     <div class="hero-scroll">
-      <span>Keep scrollings</span>
+      <span>Keep scrolling, there is more</span>
       <div class="hero-scroll-line"></div>
     </div>
   </section>
@@ -100,12 +117,12 @@
   </section>
 
   <!-- ═══ MID-PAGE CTA ═══ -->
-  <div class="mid-cta">
+  <div class="mid-cta" id="midCtaBlock">
     <div class="container">
       <p>Whether you're looking to hire or just need someone to bounce ideas off — I'm here.</p>
       <div class="mid-cta-actions">
         <a href="#consultation" class="btn btn-primary">Book a free call</a>
-        <a href="#contact" class="btn btn-outline">Or just say hello</a>
+        <a href="#contact" class="btn btn-outline">Contact me</a>
       </div>
     </div>
   </div>
@@ -126,7 +143,7 @@
       <h2 class="section-title">
         How I got here
       </h2>
-      <p class="section-subtitle">MSc in Dublin <- DevOps Trainee <- Cloud internship <- CS degree.</p>
+      <p class="section-subtitle">MSc completed in Dublin, then production DevOps, cloud internship, and strong CS fundamentals underneath all of it.</p>
       <div class="timeline" id="timeline"></div>
     </div>
   </section>
@@ -195,10 +212,10 @@
   <section class="section section-contact" id="contact">
     <div class="container">
       <h2 class="section-title">
-        Say hello
+        Contact
       </h2>
       <p class="contact-text">
-        I'm based in Dublin, finishing my MSc at NCI. Whether you've got a role that needs filling, 
+        I'm based in Dublin and recently completed my MSc at NCI. Whether you've got a role that needs filling, 
         a cloud problem that needs solving, or you just want to chat about tech over coffee, 
         I'd genuinely love to hear from you.
       </p>

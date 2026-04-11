@@ -29,7 +29,7 @@ const portfolioData = {
   consultation: {
     enabled: true,
     headline: "Need a hand with something?",
-    subheadline: "I work as a consultant and mentor with individuals and teams that deal with the older cloud, DevOps, security, or overall IT issues.",
+    subheadline: "I do consultation and beginner mentoring for people and teams working through cloud, DevOps, security, or general IT challenges. Practical support, no jargon, no fluff.",
     services: [
       {
         title: "Cloud & Infrastructure",
@@ -401,8 +401,8 @@ const portfolioData = {
 
   // ── THEME SETTINGS ─────────────────────────────────────────
   theme: {
-    primaryColor: "#00d4aa",
-    secondaryColor: "#7c3aed",
-    fontFamily: "'Inter', sans-serif",
+    primaryColor: "#0f766e",
+    secondaryColor: "#f97316",
+    fontFamily: "'Space Grotesk', sans-serif",
   }
 };

@@ -6,6 +6,8 @@
   'use strict';
 
   const d = portfolioData;
+  let audienceState = { type: null, answers: {} };
+  let defaults = null;
 
   // ── SVG ICONS ──────────────────────────────────────────────
   const icons = {
@@ -75,11 +77,15 @@
       resumeBtn.setAttribute('target', '_blank');
       resumeBtn.setAttribute('rel', 'noopener noreferrer');
       resumeBtn.removeAttribute('download');
+      resumeBtn.onclick = null;
     } else {
       if (d.personal.email) {
         resumeBtn.href = `mailto:${encodeURIComponent(d.personal.email)}?subject=Resume%20request`;
         resumeBtn.removeAttribute('download');
+        resumeBtn.removeAttribute('target');
+        resumeBtn.removeAttribute('rel');
         resumeBtn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg> Request my resume';
+        resumeBtn.onclick = null;
       } else {
         resumeBtn.style.display = 'none';
       }
@@ -416,9 +422,57 @@
     const infoContainer = document.getElementById('contactInfo');
 
     if (d.personal.email) {
-      infoContainer.appendChild(
-        el('div', { className: 'contact-item', innerHTML: `${icons.mail} <a href="mailto:${encodeURIComponent(d.personal.email)}">${d.personal.email}</a>` })
-      );
+      const emailItem = el('div', { className: 'contact-item' });
+      emailItem.insertAdjacentHTML('beforeend', icons.mail);
+
+      const emailBtn = el('button', {
+        className: 'contact-copy-btn',
+        type: 'button',
+        textContent: d.personal.email,
+        'aria-label': 'Copy email address'
+      });
+
+      let resetEmailCopyTimer = null;
+      emailBtn.addEventListener('click', async () => {
+        let copied = false;
+
+        try {
+          if (navigator.clipboard && window.isSecureContext) {
+            await navigator.clipboard.writeText(d.personal.email);
+            copied = true;
+          }
+        } catch (error) {
+          copied = false;
+        }
+
+        if (!copied) {
+          const textarea = document.createElement('textarea');
+          textarea.value = d.personal.email;
+          textarea.setAttribute('readonly', 'true');
+          textarea.style.position = 'fixed';
+          textarea.style.opacity = '0';
+          textarea.style.pointerEvents = 'none';
+          document.body.appendChild(textarea);
+          textarea.select();
+          copied = document.execCommand('copy');
+          document.body.removeChild(textarea);
+        }
+
+        if (copied) {
+          emailBtn.textContent = 'Email copied';
+          emailBtn.classList.add('copied');
+          if (resetEmailCopyTimer) {
+            clearTimeout(resetEmailCopyTimer);
+          }
+          resetEmailCopyTimer = setTimeout(() => {
+            emailBtn.textContent = d.personal.email;
+            emailBtn.classList.remove('copied');
+          }, 1600);
+        }
+      });
+
+      emailItem.appendChild(emailBtn);
+      infoContainer.appendChild(emailItem);
     }
 
     if (d.personal.location) {
@@ -495,6 +549,539 @@
   // ── RENDER: Footer ─────────────────────────────────────────
   function renderFooter() {
     document.getElementById('footerYear').textContent = new Date().getFullYear();
+  }
+
+  function captureDefaults() {
+    if (defaults) return;
+    const heroPrimaryBtn = document.querySelector('.hero-actions .btn-primary');
+    const heroOutlineBtn = document.querySelector('.hero-actions .btn-outline');
+
+    defaults = {
+      availability: document.getElementById('heroAvailability').textContent,
+      tagline: document.getElementById('heroTagline').textContent,
+      vpSubheadline: document.getElementById('vpSubheadline').textContent,
+      consultSubheadline: document.getElementById('consultSubheadline').textContent,
+      midCtaText: document.querySelector('.mid-cta p').textContent,
+      contactText: document.querySelector('.contact-text').textContent,
+      heroPrimary: {
+        text: heroPrimaryBtn ? heroPrimaryBtn.textContent : '',
+        href: heroPrimaryBtn ? heroPrimaryBtn.getAttribute('href') : '#'
+      },
+      heroOutline: {
+        text: heroOutlineBtn ? heroOutlineBtn.textContent : '',
+        href: heroOutlineBtn ? heroOutlineBtn.getAttribute('href') : '#'
+      }
+    };
+  }
+
+  function reorderContentFlow(mode, answers = {}) {
+    const anchor = document.querySelector('.footer');
+    if (!anchor) return;
+
+    const blocks = {
+      about: document.getElementById('about'),
+      value: document.getElementById('value'),
+      midCta: document.getElementById('midCtaBlock'),
+      consultation: document.getElementById('consultation'),
+      journey: document.getElementById('journey'),
+      skills: document.getElementById('skills'),
+      education: document.getElementById('education'),
+      certifications: document.getElementById('certifications'),
+      projects: document.getElementById('projects'),
+      contact: document.getElementById('contact')
+    };
+
+    const speed = answers.speed || 'balanced';
+    const primary = answers.primary || '';
+
+    let order = ['about', 'value', 'midCta', 'consultation', 'journey', 'skills', 'education', 'certifications', 'projects', 'contact'];
+
+    if (mode === 'recruiter') {
+      order = speed === 'quick'
+        ? ['value', 'skills', 'certifications', 'projects', 'contact', 'journey', 'about', 'education', 'consultation', 'midCta']
+        : ['value', 'skills', 'journey', 'certifications', 'projects', 'about', 'contact', 'education', 'consultation', 'midCta'];
+    }
+
+    if (mode === 'business') {
+      order = ['value', 'consultation', 'projects', 'skills', 'contact', 'about', 'journey', 'education', 'certifications', 'midCta'];
+    }
+
+    if (mode === 'visitor') {
+      if (primary === 'projects') {
+        order = ['projects', 'journey', 'value', 'about', 'skills', 'certifications', 'contact', 'education', 'consultation', 'midCta'];
+      } else if (primary === 'services') {
+        order = ['consultation', 'value', 'projects', 'about', 'contact', 'journey', 'skills', 'education', 'certifications', 'midCta'];
+      } else {
+        order = ['journey', 'about', 'projects', 'value', 'skills', 'certifications', 'contact', 'education', 'consultation', 'midCta'];
+      }
+    }
+
+    order.forEach((key) => {
+      const block = blocks[key];
+      if (block) {
+        document.body.insertBefore(block, anchor);
+      }
+    });
+  }
+
+  function setScanMode(mode, answers = {}) {
+    const speed = answers.speed || 'balanced';
+    document.body.classList.toggle('recruiter-scan', mode === 'recruiter' && speed === 'quick');
+  }
+
+  function setSectionVisibility(mode, answers = {}) {
+    const consultation = document.getElementById('consultation');
+    const education = document.getElementById('education');
+    const about = document.getElementById('about');
+    const value = document.getElementById('value');
+    const midCta = document.getElementById('midCtaBlock');
+    const journey = document.getElementById('journey');
+    const skills = document.getElementById('skills');
+    const certifications = document.getElementById('certifications');
+    const projects = document.getElementById('projects');
+    const contact = document.getElementById('contact');
+
+    const sectionMap = {
+      about,
+      value,
+      midCta,
+      consultation,
+      journey,
+      skills,
+      education,
+      certifications,
+      projects,
+      contact
+    };
+
+    function setVisible(sectionId, visible) {
+      const sectionEl = sectionMap[sectionId];
+      if (sectionEl) {
+        sectionEl.style.display = visible ? 'block' : 'none';
+      }
+      const navLink = document.querySelector(`.nav-links a[href="#${sectionId}"]`);
+      if (navLink) {
+        navLink.parentElement.style.display = visible ? '' : 'none';
+      }
+    }
+
+    Object.keys(sectionMap).forEach((key) => setVisible(key, true));
+
+    const consultDefault = Boolean(d.consultation && d.consultation.enabled);
+    consultation.style.display = consultDefault ? 'block' : 'none';
+    education.style.display = 'block';
+
+    if (mode === 'recruiter') {
+      setVisible('consultation', false);
+    }
+
+    if (mode === 'business') {
+      setVisible('education', false);
+      setVisible('consultation', true);
+      setVisible('certifications', false);
+    }
+
+    const speed = answers.speed || 'balanced';
+    const primary = answers.primary || '';
+
+    if (speed === 'quick') {
+      if (mode === 'recruiter') {
+        ['about', 'consultation', 'journey', 'education', 'midCta'].forEach((id) => setVisible(id, false));
+      }
+
+      if (mode === 'business') {
+        ['about', 'journey', 'education', 'certifications', 'skills', 'midCta'].forEach((id) => setVisible(id, false));
+      }
+
+      if (mode === 'visitor') {
+        if (primary === 'story') {
+          ['consultation', 'education', 'certifications', 'skills', 'midCta'].forEach((id) => setVisible(id, false));
+        }
+        if (primary === 'projects') {
+          ['consultation', 'education', 'value', 'midCta'].forEach((id) => setVisible(id, false));
+        }
+        if (primary === 'services') {
+          ['education', 'certifications', 'journey', 'skills', 'midCta'].forEach((id) => setVisible(id, false));
+          setVisible('consultation', true);
+        }
+      }
+    }
+
+    reorderContentFlow(mode, answers);
+    setScanMode(mode, answers);
+  }
+
+  function applyAudienceMode(mode, answers = {}) {
+    captureDefaults();
+    audienceState = { type: mode, answers };
+    document.body.dataset.audience = mode;
+
+    const heroAvailability = document.getElementById('heroAvailability');
+    const heroTagline = document.getElementById('heroTagline');
+    const vpSubheadline = document.getElementById('vpSubheadline');
+    const consultSubheadline = document.getElementById('consultSubheadline');
+    const midCtaText = document.querySelector('.mid-cta p');
+    const contactText = document.querySelector('.contact-text');
+    const heroPrimaryBtn = document.querySelector('.hero-actions .btn-primary');
+    const heroOutlineBtn = document.querySelector('.hero-actions .btn-outline');
+    const quickSummary = document.getElementById('quickSummary');
+
+    heroAvailability.textContent = defaults.availability;
+    heroTagline.textContent = defaults.tagline;
+    vpSubheadline.textContent = defaults.vpSubheadline;
+    consultSubheadline.textContent = defaults.consultSubheadline;
+    midCtaText.textContent = defaults.midCtaText;
+    contactText.textContent = defaults.contactText;
+
+    heroPrimaryBtn.textContent = defaults.heroPrimary.text;
+    heroPrimaryBtn.setAttribute('href', defaults.heroPrimary.href);
+    heroOutlineBtn.textContent = defaults.heroOutline.text;
+    heroOutlineBtn.setAttribute('href', defaults.heroOutline.href);
+
+    setSectionVisibility(mode, answers);
+
+    if (mode === 'recruiter') {
+      heroAvailability.textContent = defaults.availability;
+      heroTagline.textContent = 'If you are hiring, I will keep this practical: role fit, real outcomes, and how quickly I can contribute.';
+      vpSubheadline.textContent = 'You can scan my fit across IT operations, cloud operations, and support-minded DevOps work.';
+      midCtaText.textContent = 'Hiring for IT operations or cloud support? I can show the right proof quickly.';
+      contactText.textContent = 'If you are recruiting, I can share my resume and walk through role fit in one short conversation.';
+
+      const recruiterRole = answers.primary || 'operations';
+      if (recruiterRole === 'cloud') {
+        heroPrimaryBtn.textContent = 'See cloud proof';
+        heroPrimaryBtn.setAttribute('href', '#projects');
+      } else if (recruiterRole === 'devops') {
+        heroPrimaryBtn.textContent = 'See delivery experience';
+        heroPrimaryBtn.setAttribute('href', '#journey');
+      } else {
+        heroPrimaryBtn.textContent = 'See operations fit';
+        heroPrimaryBtn.setAttribute('href', '#skills');
+      }
+      heroOutlineBtn.textContent = 'Jump to certifications';
+      heroOutlineBtn.setAttribute('href', '#certifications');
+    }
+
+    if (mode === 'business') {
+      heroAvailability.textContent = defaults.availability;
+      heroTagline.textContent = 'If you need practical help with cloud, ops, or security basics, I will show where I can help and how we can start.';
+      vpSubheadline.textContent = 'Focused on practical outcomes, clear communication, and solutions that fit your current stage.';
+      consultSubheadline.textContent = 'Pick what you need most right now and we can start with focused, practical support.';
+      midCtaText.textContent = 'Got a stuck issue in operations or cloud? Let us turn it into a clear action plan.';
+      contactText.textContent = 'If you have a practical IT or cloud challenge, book a quick call and I will tell you how I can help.';
+
+      heroPrimaryBtn.textContent = 'View services';
+      heroPrimaryBtn.setAttribute('href', '#consultation');
+      heroOutlineBtn.textContent = 'See outcomes';
+      heroOutlineBtn.setAttribute('href', '#projects');
+    }
+
+    if (mode === 'visitor') {
+      heroAvailability.textContent = defaults.availability;
+      heroTagline.textContent = 'Welcome. If you are exploring, I will show the honest story, what I built, and what I learned on the way.';
+      vpSubheadline.textContent = 'Explore the journey, projects, and real-world lessons behind my work.';
+      midCtaText.textContent = 'Curious about the journey? Start where you like and explore at your own pace.';
+      contactText.textContent = 'If you want to connect, learn, or collaborate, feel free to reach out.';
+
+      heroPrimaryBtn.textContent = 'Explore my journey';
+      heroPrimaryBtn.setAttribute('href', '#journey');
+      heroOutlineBtn.textContent = 'See projects';
+      heroOutlineBtn.setAttribute('href', '#projects');
+    }
+
+    if (quickSummary) {
+      quickSummary.style.display = 'none';
+      quickSummary.innerHTML = '';
+    }
+
+    document.body.classList.remove('audience-quick');
+    const speed = answers.speed || 'balanced';
+    if (speed === 'quick' && quickSummary) {
+      const summaryMap = {
+        recruiter: [
+          'Profile fit: junior IT operations and cloud operations',
+          'Evidence: real client support and measurable cloud cost impact',
+          'Best route now: skills, certifications, projects, then contact'
+        ],
+        business: [
+          'Support style: practical help for cloud, operations, and security basics',
+          'Approach: clear communication and action-oriented guidance',
+          'Best route now: services, outcomes, then a short call'
+        ],
+        visitor: [
+          'Start with the journey for context',
+          'Move to projects for practical work and outcomes',
+          'Reach out anytime if you want to connect'
+        ]
+      };
+
+      const list = el('ul', { className: 'quick-summary-list' });
+      (summaryMap[mode] || summaryMap.visitor).forEach((item) => {
+        list.appendChild(el('li', { textContent: item }));
+      });
+      quickSummary.appendChild(list);
+      quickSummary.style.display = 'block';
+      document.body.classList.add('audience-quick');
+    }
+
+  }
+
+  function initAudienceGate() {
+    const gate = document.getElementById('audienceGate');
+    const welcome = document.getElementById('gateWelcome');
+    const title = document.getElementById('gateTitle');
+    const subtitle = document.getElementById('gateSubtitle');
+    const choices = document.getElementById('gateChoices');
+    const backBtn = document.getElementById('gateBack');
+    const skipBtn = document.getElementById('gateSkip');
+    if (!gate || !welcome || !title || !subtitle || !choices || !backBtn || !skipBtn) return;
+
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    const flows = {
+      recruiter: {
+        intro: 'Great, thanks.',
+        questions: [
+          {
+            key: 'primary',
+            question: 'What are you hiring for right now?',
+            options: [
+              { value: 'operations', label: 'IT operations', note: 'Support, reliability, incident response' },
+              { value: 'cloud', label: 'Cloud operations', note: 'Hands-on cloud delivery and upkeep' },
+              { value: 'devops', label: 'DevOps support', note: 'Pipeline and automation support' }
+            ]
+          },
+          {
+            key: 'speed',
+            question: 'How do you want to review this profile?',
+            options: [
+              { value: 'quick', label: 'Short info', note: 'Fast recruiter scan' },
+              { value: 'balanced', label: 'Balanced view', note: 'Normal overview' },
+              { value: 'deep', label: 'Deep review', note: 'Full details and flow' }
+            ]
+          }
+        ]
+      },
+      business: {
+        intro: 'Perfect, thanks.',
+        questions: [
+          {
+            key: 'primary',
+            question: 'What do you need most right now?',
+            options: [
+              { value: 'stability', label: 'Stabilize systems', note: 'Reliability and operations clarity' },
+              { value: 'delivery', label: 'Improve delivery flow', note: 'Process and deployment efficiency' },
+              { value: 'security', label: 'Security guidance', note: 'Practical risk-focused guidance' }
+            ]
+          },
+          {
+            key: 'speed',
+            question: 'How would you like this view?',
+            options: [
+              { value: 'quick', label: 'Short info', note: 'Top outcomes first' },
+              { value: 'balanced', label: 'Balanced', note: 'Clear and practical flow' },
+              { value: 'deep', label: 'Detailed', note: 'Full context and details' }
+            ]
+          }
+        ]
+      },
+      visitor: {
+        intro: 'Lovely, thanks.',
+        questions: [
+          {
+            key: 'primary',
+            question: 'What do you want to explore first?',
+            options: [
+              { value: 'story', label: 'My journey', note: 'Background and growth path' },
+              { value: 'projects', label: 'Projects', note: 'Practical work and outcomes' },
+              { value: 'services', label: 'Services', note: 'What I can help with' }
+            ]
+          },
+          {
+            key: 'speed',
+            question: 'How do you like to browse?',
+            options: [
+              { value: 'quick', label: 'Short info', note: 'Highlights only' },
+              { value: 'balanced', label: 'Normal flow', note: 'Natural section flow' },
+              { value: 'deep', label: 'Detailed sections', note: 'Everything in depth' }
+            ]
+          }
+        ]
+      }
+    };
+
+    let step = 0;
+    let selectedType = null;
+    let answers = {};
+    let typingToken = 0;
+
+    function delay(ms) {
+      return new Promise((resolve) => {
+        setTimeout(resolve, ms);
+      });
+    }
+
+    async function typeLine(node, text, token, speed = 18) {
+      node.textContent = '';
+      node.classList.add('typing');
+
+      if (prefersReducedMotion) {
+        node.textContent = text;
+        node.classList.remove('typing');
+        return;
+      }
+
+      for (let i = 0; i < text.length; i += 1) {
+        if (token !== typingToken) {
+          node.classList.remove('typing');
+          return;
+        }
+        node.textContent += text.charAt(i);
+        await delay(speed);
+      }
+
+      node.classList.remove('typing');
+    }
+
+    async function renderPrompt(lines) {
+      const token = ++typingToken;
+      const sequence = [
+        { node: welcome, text: lines.welcome, speed: 14 },
+        { node: title, text: lines.title, speed: 18 },
+        { node: subtitle, text: lines.subtitle, speed: 12 }
+      ];
+
+      for (let i = 0; i < sequence.length; i += 1) {
+        if (token !== typingToken) {
+          return;
+        }
+
+        await typeLine(sequence[i].node, sequence[i].text, token, sequence[i].speed);
+
+        if (!prefersReducedMotion && token === typingToken) {
+          await delay(90);
+        }
+      }
+    }
+
+    function animateChoices() {
+      choices.classList.remove('choices-anim');
+      void choices.offsetWidth;
+      choices.classList.add('choices-anim');
+    }
+
+    function openGate() {
+      document.body.classList.add('gate-active');
+      gate.classList.add('open');
+    }
+
+    function closeGate() {
+      document.body.classList.remove('gate-active');
+      gate.classList.remove('open');
+    }
+
+    function renderChoiceButtons(options, onSelect) {
+      choices.innerHTML = '';
+      options.forEach(opt => {
+        const button = el('button', { className: 'audience-choice', type: 'button' }, [
+          el('span', { className: 'audience-choice-title', textContent: opt.label }),
+          opt.note ? el('span', { className: 'audience-choice-note', textContent: opt.note }) : null
+        ].filter(Boolean));
+        button.addEventListener('click', () => onSelect(opt.value));
+        choices.appendChild(button);
+      });
+    }
+
+    function renderStep() {
+      backBtn.style.display = step > 0 ? 'inline-flex' : 'none';
+
+      if (step === 0) {
+        renderPrompt({
+          welcome: 'Welcome, nice to meet you.',
+          title: 'Can I ask who you are?',
+          subtitle: 'Pick the option that feels closest to you.'
+        });
+
+        renderChoiceButtons([
+          { value: 'recruiter', label: 'Recruiter', note: 'Hiring and role fit' },
+          { value: 'business', label: 'Business person', note: 'Services and outcomes' },
+          { value: 'visitor', label: 'Visitor', note: 'Explore my journey and projects' }
+        ], (value) => {
+          selectedType = value;
+          answers = {};
+          step = 1;
+          renderStep();
+        });
+        animateChoices();
+        return;
+      }
+
+      const flow = flows[selectedType];
+      if (!flow) {
+        step = 0;
+        renderStep();
+        return;
+      }
+
+      const questionIndex = step - 1;
+      const currentQuestion = flow.questions[questionIndex];
+
+      if (!currentQuestion) {
+        applyAudienceMode(selectedType, answers);
+        closeGate();
+        return;
+      }
+
+      const isLastQuestion = questionIndex === flow.questions.length - 1;
+      renderPrompt({
+        welcome: flow.intro,
+        title: currentQuestion.question,
+        subtitle: isLastQuestion
+          ? 'One last quick question.'
+          : 'Choose the option that fits you best.'
+      });
+
+      renderChoiceButtons(currentQuestion.options, (value) => {
+        answers[currentQuestion.key] = value;
+        step += 1;
+        renderStep();
+      });
+      animateChoices();
+    }
+
+    backBtn.addEventListener('click', () => {
+      if (step > 0) {
+        step -= 1;
+        renderStep();
+      }
+    });
+
+    skipBtn.addEventListener('click', () => {
+      applyAudienceMode('visitor', { primary: 'story', speed: 'balanced' });
+      closeGate();
+    });
+
+    const footerSub = document.querySelector('.footer-sub');
+    if (footerSub && !document.getElementById('audienceReset')) {
+      const resetBtn = el('button', {
+        id: 'audienceReset',
+        className: 'audience-reset',
+        type: 'button',
+        textContent: 'Personalize this page'
+      });
+      resetBtn.addEventListener('click', () => {
+        step = 0;
+        selectedType = null;
+        answers = {};
+        renderStep();
+        openGate();
+      });
+      footerSub.appendChild(document.createTextNode(' • '));
+      footerSub.appendChild(resetBtn);
+    }
+
+    renderStep();
+    openGate();
   }
 
   // ── APPLY THEME ────────────────────────────────────────────
@@ -625,6 +1212,7 @@
     renderContact();
     renderFooter();
     initNavigation();
+    initAudienceGate();
 
     // Wait a frame for DOM to settle, then start animations
     requestAnimationFrame(() => {
