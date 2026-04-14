@@ -10,12 +10,12 @@ const portfolioData = {
   // ── PERSONAL INFO ──────────────────────────────────────────
   personal: {
     name: "Mirzad Ismail",
-    title: "Junior IT Operations & Cybersecurity (SOC) Analyst",
-    tagline: "I work at the intersection of IT operations and cybersecurity: keeping systems stable, secure, and support-ready. I am focused on junior IT Operations and entry-level Cybersecurity/SOC roles where I can contribute from day one.",
+    title: "IT Operations & Cybersecurity (SOC) Analyst",
+    tagline: "I work at the intersection of IT operations and cybersecurity: keeping systems stable, secure, and support-ready. I am focused on IT Operations and Cybersecurity/SOC roles where I can contribute from day one.",
     email: "mirzad.official@outlook.com",
     location: "Dublin, Ireland",
-    availability: "Open to Junior IT Operations and Entry-Level Cybersecurity/SOC roles",
-    hiringFocus: "Target roles: Junior IT Operations, SOC Analyst (L1), Junior Cybersecurity Analyst",
+    availability: "Open to IT Operations and Cybersecurity/SOC roles",
+    hiringFocus: "Target roles: IT Operations, SOC Analyst, Cybersecurity Analyst",
     resumeLink: "#", // Link to your resume PDF — keep it for HR/ATS, your portfolio does the real talking
     calendlyLink: "https://calendly.com/mirzad-ismail", // Your Calendly booking link
     avatarUrl: "", // URL to your profile photo — personal branding tip: use a real photo, it builds trust
@@ -29,7 +29,7 @@ const portfolioData = {
   consultation: {
     enabled: true,
     headline: "Need a hand with something?",
-    subheadline: "I do consultation and beginner mentoring for people and teams working through cloud, DevOps, security, or general IT challenges. Practical support, no jargon, no fluff.",
+    subheadline: "I provide consultation and practical mentoring for people and teams working through cloud, DevOps, security, or general IT challenges. Practical support, no jargon, no fluff.",
     services: [
       {
         title: "Cloud & Infrastructure",
@@ -50,10 +50,10 @@ const portfolioData = {
         examples: ["Security posture review", "Vulnerability assessment guidance", "Secure coding practices", "Incident response planning"]
       },
       {
-        title: "Beginner Mentoring",
+        title: "Practical Mentoring",
         icon: "🧭",
-        description: "If you're just getting started in cloud, DevOps, or security and feel overwhelmed, I can mentor you step by step. Real guidance, beginner-friendly explanations, and no judgment.",
-        examples: ["Beginner Q&A sessions", "Hands-on fundamentals mentoring", "Tooling walkthroughs", "Practical learning support"]
+        description: "If you want structured support in cloud, DevOps, or security, I can mentor you step by step with clear, practical guidance.",
+        examples: ["Guided Q&A sessions", "Hands-on fundamentals mentoring", "Tooling walkthroughs", "Practical implementation support"]
       }
     ],
     cta: {
@@ -78,14 +78,14 @@ const portfolioData = {
   // Psychology: Specificity — concrete verbs, not buzzwords
   valueProposition: {
     headline: "Here's what I actually bring to the table",
-    subheadline: "If you are hiring for junior IT Operations or entry-level Cybersecurity/SOC roles, this is where I can add value immediately.",
+    subheadline: "If you are hiring for IT Operations or Cybersecurity/SOC roles, this is where I can add value immediately.",
     cards: [
       {
         role: "IT Support",
         icon: "🖥️",
         promise: "When someone's laptop won't connect or a server's acting up, I'm the person who figures it out calmly, clearly, and fast.",
         proof: [
-          "Handled Level 2 support directly with clients at Crozaint",
+          "Handled advanced support directly with clients at Crozaint",
           "Ran scheduled backups, monitored resources, and wrote reports clients could actually understand",
           "Learned to prioritise on the fly when three things break at once"
         ],
@@ -149,12 +149,12 @@ const portfolioData = {
       phase: "The real deal",
       icon: "⚙️",
       period: "Jan 2024 - Jun 2024",
-      role: "Junior DevOps Engineer Trainee",
+      role: "DevOps Engineer Trainee",
       company: "Crozaint Technologies Pvt Ltd",
       description: "This is where I grew up professionally. Real clients, real deadlines, real consequences. I automated deployments, managed cloud environments, and learned what it means when your script runs in production and actual people are waiting.",
       achievements: [
         "Wrote automation scripts that cut cloud costs by 10%",
-        "Handled Level 2 support directly with clients when things needed fixing fast",
+        "Handled advanced client support directly when things needed fixing fast",
         "Set up and monitored cloud environments tailored to what each client actually needed",
         "Built automated backup and reporting workflows so nothing fell through the cracks",
         "Improved CI/CD pipelines across AWS and Azure"
@@ -311,13 +311,13 @@ const portfolioData = {
   securityEvidence: {
     enabled: true,
     headline: "SOC & Cybersecurity Evidence",
-    subheadline: "Focused evidence from MSc modules directly aligned to entry-level SOC and cybersecurity operations work.",
+    subheadline: "Focused evidence from MSc modules aligned to SOC and cybersecurity operations work.",
     items: [
       {
         title: "Incident Response & Analytics (MSc Module)",
         summary: "Built SOC-style triage and response workflows during Incident Response & Analytics, including severity classification, containment steps, and escalation notes.",
         outcomes: [
-          "Classified events by business impact and urgency for L1 triage flow",
+          "Classified events by business impact and urgency for SOC triage flow",
           "Documented containment and escalation steps in analyst-ready format",
           "Linked incident evidence to post-incident recommendations"
         ],
@@ -435,7 +435,7 @@ const portfolioData = {
     { value: "MSc", label: "Cyber Security" },
     { value: "10%", label: "Cloud Costs Cut" },
     { value: "6mo", label: "Production DevOps" },
-    { value: "L2", label: "Client IT Support" }
+    { value: "Client", label: "IT Support Experience" }
   ],
 
   // ── THEME SETTINGS ─────────────────────────────────────────

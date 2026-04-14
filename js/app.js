@@ -791,8 +791,8 @@
     if (mode === 'recruiter') {
       heroAvailability.textContent = defaults.availability;
       heroTagline.textContent = 'If you are hiring, I will keep this practical: role fit, real outcomes, and how quickly I can contribute.';
-      vpSubheadline.textContent = 'You can scan my fit across IT operations and entry-level cybersecurity or SOC support work.';
-      midCtaText.textContent = 'Hiring for IT operations or entry-level cybersecurity? I can show the right proof quickly.';
+      vpSubheadline.textContent = 'You can scan my fit across IT operations and cybersecurity or SOC support work.';
+      midCtaText.textContent = 'Hiring for IT operations or cybersecurity? I can show the right proof quickly.';
       contactText.textContent = 'If you are recruiting, I can share my resume and walk through role fit in one short conversation.';
 
       const recruiterRole = answers.primary || 'operations';
@@ -850,7 +850,7 @@
     if (speed === 'quick' && quickSummary) {
       const summaryMap = {
         recruiter: [
-          'Profile fit: junior IT operations plus entry-level cybersecurity or SOC roles',
+          'Profile fit: IT operations plus cybersecurity or SOC roles',
           'Evidence: real client support, cloud operations delivery, and MSc cybersecurity depth',
           'Best route now: skills, certifications, projects, then contact'
         ],
@@ -899,7 +899,7 @@
             options: [
               { value: 'operations', label: 'IT operations', note: 'Support, reliability, incident response' },
               { value: 'cloud', label: 'Cloud operations', note: 'Hands-on cloud delivery and upkeep' },
-              { value: 'security', label: 'Cybersecurity / SOC', note: 'Entry-level SOC and security operations fit' },
+              { value: 'security', label: 'Cybersecurity / SOC', note: 'SOC and security operations fit' },
               { value: 'devops', label: 'DevOps support', note: 'Pipeline and automation support' }
             ]
           },
