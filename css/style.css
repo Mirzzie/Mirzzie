@@ -1421,6 +1421,88 @@ body.recruiter-scan .timeline-description {
 }
 
 /* ── PROJECTS ───────────────────────────────────────────────── */
+.security-evidence {
+  margin: 0 0 28px;
+  padding: 22px;
+  background: linear-gradient(140deg, rgba(var(--accent-rgb), 0.1), rgba(var(--accent-secondary-rgb), 0.08));
+  border: 1px solid rgba(var(--accent-rgb), 0.25);
+  border-radius: var(--border-radius);
+}
+
+.security-evidence-title {
+  font-size: 1.15rem;
+  margin-bottom: 6px;
+}
+
+.security-evidence-subtitle {
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  margin-bottom: 16px;
+  line-height: 1.6;
+}
+
+.security-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 14px;
+}
+
+.security-evidence-card {
+  background: rgba(12, 18, 28, 0.72);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
+  border-radius: var(--border-radius-sm);
+  padding: 16px;
+}
+
+.security-evidence-card-title {
+  font-size: 0.98rem;
+  margin-bottom: 8px;
+}
+
+.security-evidence-card-summary {
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  line-height: 1.55;
+  margin-bottom: 10px;
+}
+
+.security-evidence-list {
+  list-style: none;
+  margin-bottom: 12px;
+}
+
+.security-evidence-list li {
+  position: relative;
+  padding-left: 14px;
+  color: var(--text-secondary);
+  font-size: 0.84rem;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.security-evidence-list li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+}
+
+.security-evidence-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.security-evidence-tool {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-family: var(--font-mono);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
+  color: var(--accent);
+  background: rgba(var(--accent-rgb), 0.08);
+}
+
 .projects-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -1839,6 +1921,16 @@ body.recruiter-scan .timeline-description {
 @media (max-width: 768px) {
   :root {
     --section-padding: 60px 0;
+  }
+
+  .security-evidence {
+    padding: 16px;
+    margin-bottom: 20px;
+  }
+
+  .security-evidence-grid {
+    grid-template-columns: 1fr;
+    gap: 10px;
   }
 
   .audience-gate {

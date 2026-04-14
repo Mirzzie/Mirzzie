@@ -10,12 +10,12 @@ const portfolioData = {
   // ── PERSONAL INFO ──────────────────────────────────────────
   personal: {
     name: "Mirzad Ismail",
-    title: "Junior IT Operations & Cloud Operations Engineer",
-    tagline: "I help teams keep systems reliable, secure, and well-documented. I am currently focused on junior IT Operations and Cloud Operations roles where I can contribute from day one and keep leveling up fast.",
+    title: "Junior IT Operations & Cybersecurity (SOC) Analyst",
+    tagline: "I work at the intersection of IT operations and cybersecurity: keeping systems stable, secure, and support-ready. I am focused on junior IT Operations and entry-level Cybersecurity/SOC roles where I can contribute from day one.",
     email: "mirzad.official@outlook.com",
     location: "Dublin, Ireland",
-    availability: "Open to Junior IT Operations / Cloud Operations roles",
-    hiringFocus: "Target roles: Junior IT Operations, Cloud Operations, DevOps Support",
+    availability: "Open to Junior IT Operations and Entry-Level Cybersecurity/SOC roles",
+    hiringFocus: "Target roles: Junior IT Operations, SOC Analyst (L1), Junior Cybersecurity Analyst",
     resumeLink: "#", // Link to your resume PDF — keep it for HR/ATS, your portfolio does the real talking
     calendlyLink: "https://calendly.com/mirzad-ismail", // Your Calendly booking link
     avatarUrl: "", // URL to your profile photo — personal branding tip: use a real photo, it builds trust
@@ -78,7 +78,7 @@ const portfolioData = {
   // Psychology: Specificity — concrete verbs, not buzzwords
   valueProposition: {
     headline: "Here's what I actually bring to the table",
-    subheadline: "If you're hiring for junior IT Operations, Cloud Operations, or DevOps support, this is exactly where I can add value.",
+    subheadline: "If you are hiring for junior IT Operations or entry-level Cybersecurity/SOC roles, this is where I can add value immediately.",
     cards: [
       {
         role: "IT Support",
@@ -103,15 +103,15 @@ const portfolioData = {
         edge: "I'm not the kind of person who waits for the alert. I check things, document things, and try to make sure the alert never fires."
       },
       {
-        role: "Cloud Admin",
-        icon: "☁️",
-        promise: "I work with AWS and Azure deploying things, keeping them secure, and making sure the bill doesn't quietly spiral.",
+        role: "Cybersecurity Operations (SOC-Ready)",
+        icon: "🛡️",
+        promise: "I bring an operations-first security mindset: monitor signals, reduce risk early, and respond in a structured way when incidents happen.",
         proof: [
-          "Managed real AWS and Azure environments for paying clients",
-          "Wrote scripts that actually saved 10% on cloud costs",
-          "Currently studying cyber security, so I think about hardening from day one"
+          "Completed MSc Cyber Security with hands-on modules in incident response, forensics, malware analysis, and secure coding",
+          "Built practical strength in SIEM concepts, vulnerability analysis, and security-focused troubleshooting",
+          "Approach security with strong IT operations foundations, so controls stay practical and usable"
         ],
-        edge: "Most people learn security after something goes wrong. I'm learning it now, on purpose, alongside the cloud work."
+        edge: "I do not treat operations and security as separate worlds. I focus on reliable systems that are also secure by design."
       },
       {
         role: "Automation & DevOps",
@@ -306,6 +306,45 @@ const portfolioData = {
       modules: []
     }
   ],
+
+  // ── SOC / CYBERSECURITY EVIDENCE ─────────────────────────
+  securityEvidence: {
+    enabled: true,
+    headline: "SOC & Cybersecurity Evidence",
+    subheadline: "Focused evidence from MSc modules directly aligned to entry-level SOC and cybersecurity operations work.",
+    items: [
+      {
+        title: "Incident Response & Analytics (MSc Module)",
+        summary: "Built SOC-style triage and response workflows during Incident Response & Analytics, including severity classification, containment steps, and escalation notes.",
+        outcomes: [
+          "Classified events by business impact and urgency for L1 triage flow",
+          "Documented containment and escalation steps in analyst-ready format",
+          "Linked incident evidence to post-incident recommendations"
+        ],
+        tools: ["Incident Response & Analytics", "SIEM Concepts", "Escalation Playbooks"]
+      },
+      {
+        title: "Forensics & eDiscovery (MSc Module)",
+        summary: "Applied end-to-end forensic workflow from evidence handling to reporting within Forensics & eDiscovery labs.",
+        outcomes: [
+          "Created timeline-based incident narratives from collected artefacts",
+          "Practiced evidence handling with chain-of-custody awareness",
+          "Translated technical findings into clear business-facing summaries"
+        ],
+        tools: ["Forensics & eDiscovery", "Digital Evidence Handling", "Case Documentation"]
+      },
+      {
+        title: "Network Security & Penetration Testing + Cloud Security",
+        summary: "Assessed common vulnerabilities in lab environments and prioritized practical hardening actions that fit operational realities.",
+        outcomes: [
+          "Identified misconfigurations and mapped remediation by risk priority",
+          "Connected penetration testing findings to day-to-day security controls",
+          "Applied Cloud Security principles to reduce common attack surface"
+        ],
+        tools: ["Network Security & Penetration Testing", "Cloud Security", "Vulnerability Analysis"]
+      }
+    ]
+  },
 
   // ── PROJECTS ───────────────────────────────────────────────
   projects: [

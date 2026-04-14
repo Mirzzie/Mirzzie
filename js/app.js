@@ -320,7 +320,55 @@
 
   // ── RENDER: Projects ───────────────────────────────────────
   function renderProjects() {
+    const section = document.getElementById('projects');
     const container = document.getElementById('projectsGrid');
+    if (!section || !container) return;
+
+    container.innerHTML = '';
+
+    const existingEvidence = section.querySelector('.security-evidence');
+    if (existingEvidence) {
+      existingEvidence.remove();
+    }
+
+    if (d.securityEvidence && d.securityEvidence.enabled && Array.isArray(d.securityEvidence.items) && d.securityEvidence.items.length) {
+      const evidenceGrid = el('div', { className: 'security-evidence-grid' });
+
+      d.securityEvidence.items.forEach((item) => {
+        const outcomes = el('ul', { className: 'security-evidence-list' });
+        (item.outcomes || []).forEach((outcome) => {
+          outcomes.appendChild(el('li', { textContent: outcome }));
+        });
+
+        const tools = el('div', { className: 'security-evidence-tools' });
+        (item.tools || []).forEach((tool) => {
+          tools.appendChild(el('span', { className: 'security-evidence-tool', textContent: tool }));
+        });
+
+        const card = el('article', { className: 'security-evidence-card fade-in' }, [
+          el('h4', { className: 'security-evidence-card-title', textContent: item.title }),
+          el('p', { className: 'security-evidence-card-summary', textContent: item.summary }),
+          (item.outcomes && item.outcomes.length) ? outcomes : null,
+          (item.tools && item.tools.length) ? tools : null
+        ].filter(Boolean));
+
+        evidenceGrid.appendChild(card);
+      });
+
+      const evidenceBlock = el('div', { className: 'security-evidence fade-in' }, [
+        el('h3', { className: 'security-evidence-title', textContent: d.securityEvidence.headline || 'SOC & Cybersecurity Evidence' }),
+        d.securityEvidence.subheadline
+          ? el('p', { className: 'security-evidence-subtitle', textContent: d.securityEvidence.subheadline })
+          : null,
+        evidenceGrid
+      ].filter(Boolean));
+
+      const sectionContainer = section.querySelector('.container');
+      if (sectionContainer) {
+        sectionContainer.insertBefore(evidenceBlock, container);
+      }
+    }
+
     const projectIcons = ['🏗️', '🔄', '⎈', '📊', '🛡️', '☁️', '⚙️', '🔒'];
 
     d.projects.forEach((project, index) => {
@@ -743,14 +791,17 @@
     if (mode === 'recruiter') {
       heroAvailability.textContent = defaults.availability;
       heroTagline.textContent = 'If you are hiring, I will keep this practical: role fit, real outcomes, and how quickly I can contribute.';
-      vpSubheadline.textContent = 'You can scan my fit across IT operations, cloud operations, and support-minded DevOps work.';
-      midCtaText.textContent = 'Hiring for IT operations or cloud support? I can show the right proof quickly.';
+      vpSubheadline.textContent = 'You can scan my fit across IT operations and entry-level cybersecurity or SOC support work.';
+      midCtaText.textContent = 'Hiring for IT operations or entry-level cybersecurity? I can show the right proof quickly.';
       contactText.textContent = 'If you are recruiting, I can share my resume and walk through role fit in one short conversation.';
 
       const recruiterRole = answers.primary || 'operations';
       if (recruiterRole === 'cloud') {
         heroPrimaryBtn.textContent = 'See cloud proof';
         heroPrimaryBtn.setAttribute('href', '#projects');
+      } else if (recruiterRole === 'security') {
+        heroPrimaryBtn.textContent = 'See security fit';
+        heroPrimaryBtn.setAttribute('href', '#skills');
       } else if (recruiterRole === 'devops') {
         heroPrimaryBtn.textContent = 'See delivery experience';
         heroPrimaryBtn.setAttribute('href', '#journey');
@@ -764,11 +815,11 @@
 
     if (mode === 'business') {
       heroAvailability.textContent = defaults.availability;
-      heroTagline.textContent = 'If you need practical help with cloud, ops, or security basics, I will show where I can help and how we can start.';
+      heroTagline.textContent = 'If you need practical help with cloud, ops, or cybersecurity basics, I will show where I can help and how we can start.';
       vpSubheadline.textContent = 'Focused on practical outcomes, clear communication, and solutions that fit your current stage.';
       consultSubheadline.textContent = 'Pick what you need most right now and we can start with focused, practical support.';
-      midCtaText.textContent = 'Got a stuck issue in operations or cloud? Let us turn it into a clear action plan.';
-      contactText.textContent = 'If you have a practical IT or cloud challenge, book a quick call and I will tell you how I can help.';
+      midCtaText.textContent = 'Got a stuck issue in operations, cloud, or security? Let us turn it into a clear action plan.';
+      contactText.textContent = 'If you have a practical IT, cloud, or security challenge, book a quick call and I will tell you how I can help.';
 
       heroPrimaryBtn.textContent = 'View services';
       heroPrimaryBtn.setAttribute('href', '#consultation');
@@ -799,8 +850,8 @@
     if (speed === 'quick' && quickSummary) {
       const summaryMap = {
         recruiter: [
-          'Profile fit: junior IT operations and cloud operations',
-          'Evidence: real client support and measurable cloud cost impact',
+          'Profile fit: junior IT operations plus entry-level cybersecurity or SOC roles',
+          'Evidence: real client support, cloud operations delivery, and MSc cybersecurity depth',
           'Best route now: skills, certifications, projects, then contact'
         ],
         business: [
@@ -848,6 +899,7 @@
             options: [
               { value: 'operations', label: 'IT operations', note: 'Support, reliability, incident response' },
               { value: 'cloud', label: 'Cloud operations', note: 'Hands-on cloud delivery and upkeep' },
+              { value: 'security', label: 'Cybersecurity / SOC', note: 'Entry-level SOC and security operations fit' },
               { value: 'devops', label: 'DevOps support', note: 'Pipeline and automation support' }
             ]
           },
