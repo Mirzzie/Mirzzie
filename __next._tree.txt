@@ -1,0 +1,7 @@
+:HL["/Mirzzie/_next/static/chunks/18d8yltpbptd_.css","style"]
+:HL["https://res.cloudinary.com/u6p6yy3l/image/upload/v1783943705/w3gja67dhsi8grm9sykc.jpg","image"]
+:HL["https://res.cloudinary.com/u6p6yy3l/image/upload/v1783942613/wrwcas3zk6lfiq33cube.jpg","image"]
+:HL["https://res.cloudinary.com/u6p6yy3l/image/upload/v1783944602/zvfxhgntydmwopgamcxd.jpg","image"]
+:HL["https://res.cloudinary.com/u6p6yy3l/image/upload/v1783944788/kwa96ijjnxqo8cxkcho8.jpg","image"]
+:HL["https://res.cloudinary.com/u6p6yy3l/image/upload/v1783945346/vxtrmk189ye0mnvpjdgf.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"FJL0XJJCkWob4SlxhvBty"}

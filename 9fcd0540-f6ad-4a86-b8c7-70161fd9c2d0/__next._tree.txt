@@ -1,0 +1,3 @@
+:HL["/Mirzzie/_next/static/chunks/18d8yltpbptd_.css","style"]
+:HL["https://res.cloudinary.com/u6p6yy3l/image/upload/v1783944788/kwa96ijjnxqo8cxkcho8.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"id","param":{"type":"d","key":"9fcd0540-f6ad-4a86-b8c7-70161fd9c2d0","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"FJL0XJJCkWob4SlxhvBty"}

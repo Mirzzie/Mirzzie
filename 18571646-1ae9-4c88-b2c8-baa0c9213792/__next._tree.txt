@@ -1,0 +1,2 @@
+:HL["/Mirzzie/_next/static/chunks/18d8yltpbptd_.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"id","param":{"type":"d","key":"18571646-1ae9-4c88-b2c8-baa0c9213792","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"FJL0XJJCkWob4SlxhvBty"}
