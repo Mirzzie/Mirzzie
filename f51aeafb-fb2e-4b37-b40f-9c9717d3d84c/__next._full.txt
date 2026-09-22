@@ -1,0 +1,86 @@
+1:"$Sreact.fragment"
+2:I[39756,["/Mirzzie/_next/static/chunks/05-c3ty_6dwfk.js","/Mirzzie/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+3:I[37457,["/Mirzzie/_next/static/chunks/05-c3ty_6dwfk.js","/Mirzzie/_next/static/chunks/14mrh2-p_w84d.js"],"default"]
+5:I[97367,["/Mirzzie/_next/static/chunks/05-c3ty_6dwfk.js","/Mirzzie/_next/static/chunks/14mrh2-p_w84d.js"],"OutletBoundary"]
+6:"$Sreact.suspense"
+9:I[97367,["/Mirzzie/_next/static/chunks/05-c3ty_6dwfk.js","/Mirzzie/_next/static/chunks/14mrh2-p_w84d.js"],"ViewportBoundary"]
+b:I[97367,["/Mirzzie/_next/static/chunks/05-c3ty_6dwfk.js","/Mirzzie/_next/static/chunks/14mrh2-p_w84d.js"],"MetadataBoundary"]
+d:I[68027,["/Mirzzie/_next/static/chunks/05-c3ty_6dwfk.js","/Mirzzie/_next/static/chunks/14mrh2-p_w84d.js"],"default",1]
+:HL["/Mirzzie/_next/static/chunks/228hdoy3i1bzv.css","style"]
+:HL["/Mirzzie/_next/static/media/797e433ab948586e-s.p.0r6juujl39pe6.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Mirzzie/_next/static/media/83afe278b6a6bb3c-s.p.2bn3s6zvc0dyp.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/Mirzzie/_next/static/media/caa3a2e1cccd8315-s.p.0wgildi0cnwt9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"P":null,"c":["","f51aeafb-fb2e-4b37-b40f-9c9717d3d84c",""],"q":"","i":false,"f":[[["",{"children":[["id","f51aeafb-fb2e-4b37-b40f-9c9717d3d84c","d",null],{"children":["__PAGE__",{}]}]},"$undefined","$undefined",16],[["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/Mirzzie/_next/static/chunks/228hdoy3i1bzv.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","script","script-0",{"src":"/Mirzzie/_next/static/chunks/05-c3ty_6dwfk.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Mirzzie/_next/static/chunks/14mrh2-p_w84d.js","async":true,"nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"geist_a71539c9-module__T19VSG__variable geist_mono_8d43a2aa-module__8Li5zG__variable inter_c5295f7d-module__c6QqNq__variable dark h-full antialiased","children":["$","body",null,{"style":{"margin":0},"children":["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}]]}],{"children":[["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["$","$1","c",{"children":["$L4",[["$","script","script-0",{"src":"/Mirzzie/_next/static/chunks/12in3gkc0yq4e.js","async":true,"nonce":"$undefined"}],["$","script","script-1",{"src":"/Mirzzie/_next/static/chunks/0j18he3kzei77.js","async":true,"nonce":"$undefined"}]],["$","$L5",null,{"children":["$","$6",null,{"name":"Next.MetadataOutlet","children":"$@7"}]}]]}],{},null,false,null]},null,false,"$@8"]},null,false,null],["$","$1","h",{"children":[null,["$","$L9",null,{"children":"$La"}],["$","div",null,{"hidden":true,"children":["$","$Lb",null,{"children":["$","$6",null,{"name":"Next.Metadata","children":"$Lc"}]}]}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],false]],"m":"$undefined","G":["$d",[["$","link","0",{"rel":"stylesheet","href":"/Mirzzie/_next/static/chunks/228hdoy3i1bzv.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]]],"S":true,"h":null,"s":"$undefined","l":"$undefined","p":"$undefined","d":"$undefined","b":"ceMd_HKY8p0874SAEQRb-"}
+e:[]
+8:"$We"
+10:I[22016,["/Mirzzie/_next/static/chunks/05-c3ty_6dwfk.js","/Mirzzie/_next/static/chunks/14mrh2-p_w84d.js","/Mirzzie/_next/static/chunks/12in3gkc0yq4e.js","/Mirzzie/_next/static/chunks/0j18he3kzei77.js"],""]
+f:T873,
+[data-pf-template]{
+  --pf-bg:#15181c;
+  --pf-surface:#1c2126;
+  --pf-surface-2:#232930;
+  --pf-ink:#e4e8ea;
+  --pf-ink-2:#a9b2b9;
+  --pf-ink-3:#78838b;
+  --pf-line:#2b3138;
+  --pf-accent:#41c096;
+  --pf-accent-soft:rgba(65,192,150,.13);
+  --pf-gap:#d59155;
+  --pf-gap-soft:rgba(213,145,85,.10);
+  --pf-invert:#12151a;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  [data-pf-template]{
+    --pf-bg:#f4f5f3;
+    --pf-surface:#ffffff;
+    --pf-surface-2:#eef0ed;
+    --pf-ink:#14171a;
+    --pf-ink-2:#454c53;
+    --pf-ink-3:#79828b;
+    --pf-line:#dfe2de;
+    --pf-accent:#0b6b53;
+    --pf-accent-soft:rgba(11,107,83,.10);
+    --pf-gap:#a54a1a;
+    --pf-gap-soft:rgba(165,74,26,.06);
+    --pf-invert:#f4f5f3;
+    color-scheme:light;
+  }
+}
+[data-pf-template]{background:var(--pf-bg);color:var(--pf-ink);}
+[data-pf-template] ::selection{background:var(--pf-accent-soft);}
+[data-pf-template] :focus-visible{outline:2px solid var(--pf-accent);outline-offset:2px;border-radius:3px;}
+
+/* Ambient art: two soft pools of colour and a faint grid. Fixed and motionless —
+   atmosphere, not animation. */
+.pf-art{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+.pf-art::before{
+  content:"";position:absolute;inset:0;
+  background:
+    radial-gradient(58rem 40rem at 12% -8%, rgba(65,192,150,.10), transparent 62%),
+    radial-gradient(50rem 38rem at 92% 8%, rgba(86,132,196,.09), transparent 60%);
+}
+.pf-art::after{
+  content:"";position:absolute;inset:0;opacity:.30;
+  background-image:
+    linear-gradient(to right, var(--pf-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--pf-line) 1px, transparent 1px);
+  background-size:76px 76px;
+  mask-image:radial-gradient(70% 55% at 50% 0%, #000 20%, transparent 75%);
+  -webkit-mask-image:radial-gradient(70% 55% at 50% 0%, #000 20%, transparent 75%);
+}
+@media (prefers-color-scheme: light){
+  .pf-art::before{
+    background:
+      radial-gradient(58rem 40rem at 12% -8%, rgba(11,107,83,.07), transparent 62%),
+      radial-gradient(50rem 38rem at 92% 8%, rgba(86,132,196,.06), transparent 60%);
+  }
+  .pf-art::after{opacity:.55;}
+}
+@media print{.pf-art{display:none;}}
+4:["$","main",null,{"className":"min-h-screen bg-[var(--pf-bg)] font-sans text-[var(--pf-ink)] antialiased","children":[[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"$f"}}],["$","div",null,{"className":"pf-art","aria-hidden":"true"}]],["$","div",null,{"className":"relative z-10 mx-auto max-w-3xl px-6 py-12 md:py-16","children":[["$","$L10",null,{"href":"/","className":"font-mono text-[12px] text-[var(--pf-ink-3)] transition-colors hover:text-[var(--pf-ink)]","children":"← Back to portfolio"}],["$","header",null,{"className":"mt-7 border-b border-[var(--pf-line)] pb-8","children":[["$","span",null,{"className":"font-mono text-[11px] uppercase tracking-[0.16em] text-[var(--pf-accent)]","children":["Experience"," · user support tickets"]}],["$","h1",null,{"className":"mt-3 text-balance text-[clamp(30px,4.6vw,46px)] font-extrabold leading-[1.04] tracking-[-0.03em]","children":"IT Support Consultant"}],["$","p",null,{"className":"mt-3 text-[14px] text-[var(--pf-ink-3)]","children":"Spark Technomedia · Jan 2026 - Aug 2026"}],["$","p",null,{"className":"mt-5 max-w-[58ch] text-[17px] leading-relaxed text-[var(--pf-ink-2)]","children":"Handled user support tickets for hardware, software and access issues that were prioritised for fast resolution with minimal disruption. Resolved Linux systems, identified service and configuration issues, and maintained systems to ensure stability. Worked independently with a small-scale environment taking issues end to end from initial report to resolution. Documented fixes, troubleshoots for quicker resolution in the future."}],null,null]}],null,"$L11","$L12"]}]]}]
+11:["$","section",null,{"className":"mt-10 rounded-lg border border-dashed border-[var(--pf-gap)]/50 bg-[var(--pf-gap-soft)] p-4","children":[["$","span",null,{"className":"mb-1 block font-mono text-[11px] uppercase tracking-[0.1em] text-[var(--pf-gap)]","children":"No artefact yet"}],["$","p",null,{"className":"m-0 text-[14px] text-[var(--pf-ink-2)]","children":"This case has nothing to show yet — a screenshot, a diagram or a repo would make it evidence rather than a description."}]]}]
+12:["$","footer",null,{"className":"mt-14 border-t border-[var(--pf-line)] pt-6 text-[13px] text-[var(--pf-ink-3)]","children":["$","$L10",null,{"href":"/","className":"transition-colors hover:text-[var(--pf-ink)]","children":["← Back to ","Mirzad Ismail"]}]}]
+a:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+7:null
+c:[["$","title","0",{"children":"Portfolio"}]]
